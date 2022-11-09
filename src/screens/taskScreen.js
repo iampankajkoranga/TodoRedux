@@ -43,7 +43,7 @@ export class taskScreen extends Component {
     console.log(todoData[type]);
     return (
       <View>
-        {/* <View style={styles.main}> */}
+        <View style={styles.main}>
         <View style={styles.head}>
           <View style={styles.header}>
             <Text style={styles.text1}>Work Projects</Text>
@@ -77,7 +77,7 @@ export class taskScreen extends Component {
             }}
           />
         </View>
-        {/* </View> */}
+        </View>
         <View style={styles.addButton}>
           <TouchableOpacity
             onPress={() =>
@@ -106,8 +106,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(taskScreen);
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
-    backgroundColor: 'green',
+    // flex: 1,
+    height:"100%",
+    // backgroundColor: 'green',
   },
   head: {
     alignItems: 'center',
@@ -124,14 +125,21 @@ const styles = StyleSheet.create({
     // positon: 'absolute',
     // bottom: 0,
     // left: 0,
-    alignSelf: 'center',
+    // alignSelf: 'center',
+
   },
   addText: {
     backgroundColor: 'red',
     color: 'white',
-    fontSize: 25,
-    // position: 'absolute',
-    // bottom: 0,
+    fontSize: 35,
+    position: 'absolute',
+    bottom: 0,
+    right:0,
+    width:45,
+    padding:5
+ 
+    
+
   },
   img: {
     height: 20,

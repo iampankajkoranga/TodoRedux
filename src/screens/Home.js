@@ -28,7 +28,7 @@ const Home = ({navigation}) => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.categ} onPress={()=>navigation.navigate("taskScreen",
     {type:"fitness"})}   >
-          <Text style={styles.taskText}>Fitness</Text>
+          <Text style={styles.taskText}>Fitness task</Text>
           <Text>5 tasks</Text>
         </TouchableOpacity>
       </View>
@@ -81,8 +81,9 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   categ: {
-    // borderWidth:1,
-    // width:100,
+    borderWidth:1,
+    width:100,
     padding: 10,
+    backgroundColor:"pink"
   },
 });
