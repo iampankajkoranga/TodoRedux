@@ -5,6 +5,7 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
+  ImageBackground,
 } from 'react-native';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -42,7 +43,9 @@ export class taskScreen extends Component {
     // console.log('todoData', todoData.personal);
     console.log(todoData[type]);
     return (
-      <View>
+      <View >
+                <ImageBackground  source={require('../asset/work.png')} resizeMode="contain" style={styles.image}/>
+           
         <View style={styles.main}>
         <View style={styles.head}>
           <View style={styles.header}>
@@ -77,6 +80,7 @@ export class taskScreen extends Component {
             }}
           />
         </View>
+
         </View>
         <View style={styles.addButton}>
           <TouchableOpacity
@@ -85,7 +89,9 @@ export class taskScreen extends Component {
             }>
             <Text style={styles.addText}>+</Text>
           </TouchableOpacity>
+          
         </View>
+
       </View>
     );
   }
@@ -108,10 +114,15 @@ const styles = StyleSheet.create({
   main: {
     // flex: 1,
     height:"100%",
-    // backgroundColor: 'green',
+   backgroundColor: 'white',
   },
   head: {
     alignItems: 'center',
+  },
+  image:{
+    height:100,
+    // width:200
+
   },
   header: {
     alignItems: 'center',
@@ -148,7 +159,7 @@ const styles = StyleSheet.create({
   data: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // backgroundColor:"green",
+    backgroundColor:"lightblue",
     width: 330,
     borderWidth: 1,
     padding: 10,
